@@ -11,30 +11,33 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title:
-              Text('Weather forecast', style: TextStyle(color: Colors.white)),
-          centerTitle: true,
-          backgroundColor: Colors.redAccent,
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {},
-          ),
-          iconTheme: IconThemeData(color: Colors.black54),
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.settings),
+    return Container(
+      width: 500,
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title:
+                Text('Weather forecast', style: TextStyle(color: Colors.white)),
+            centerTitle: true,
+            backgroundColor: Colors.redAccent,
+            leading: IconButton(
+              icon: Icon(Icons.menu),
               onPressed: () {},
-            )
-          ],
-        ),
-        body: Container(
-          alignment: Alignment.topCenter,
-          color: Colors.redAccent,
-          child: BuildBodyWidget(),
+            ),
+            iconTheme: IconThemeData(color: Colors.black54),
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.settings),
+                onPressed: () {},
+              )
+            ],
+          ),
+          body: Container(
+            alignment: Alignment.topCenter,
+            color: Colors.redAccent,
+            child: BuildBodyWidget(),
+          ),
         ),
       ),
     );

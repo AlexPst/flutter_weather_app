@@ -8,12 +8,15 @@ class BuildBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Column(children: <Widget>[
-      inputCityField(),
-      cityNameField(),
-      temperatureDetailField(),
-      extraWeatherDetails()
-    ]));
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+          inputCityField(),
+          cityNameField(),
+          temperatureDetailField(),
+          extraWeatherDetails(),
+          _listWiew()
+        ]));
   }
 }
 
@@ -96,4 +99,170 @@ extraWeatherDetails() {
     ]),
     Spacer()
   ]);
+}
+
+_listWiew() {
+  return Container(
+    height: 150,
+    child: ListView(
+        padding: EdgeInsets.all(20.0),
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Вторник",
+                        style: TextStyle(color: Colors.white, fontSize: 20.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("22°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Среда",
+                        style: TextStyle(color: Colors.white, fontSize: 20.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("20°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Четверг",
+                        style: TextStyle(color: Colors.white, fontSize: 25.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("20°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Пятница",
+                        style: TextStyle(color: Colors.white, fontSize: 25.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("25°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Суббота",
+                        style: TextStyle(color: Colors.white, fontSize: 25.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("23°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Воскресенье",
+                        style: TextStyle(color: Colors.white, fontSize: 15.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("27°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white60,
+              width: 100,
+              child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Понедельник",
+                        style: TextStyle(color: Colors.white, fontSize: 15.0)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("26°C",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0)),
+                        Icon(Icons.sunny, color: Colors.white, size: 40.0),
+                      ],
+                    )
+                  ]),
+            ),
+          ),
+        ]),
+  );
 }
